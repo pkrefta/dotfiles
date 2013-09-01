@@ -1,0 +1,29 @@
+[user]
+	name = Pawel Krefta
+	email = pawel.krefta@gmail.com
+[color "status"]
+	added = blue
+	changed = yellow
+	untracked = white ul
+[color]
+	ui = true
+[color "diff"]
+	meta = white bold
+	frag = magenta ul
+	old = red bold
+	new = green bold
+[alias]
+	lg = log --graph --pretty=format:'[%h] -%d %an %cr: %s' --abbrev-commit --date=relative
+	ci = commit
+	br = branch
+	switch = checkout
+	co = checkout
+	freeze = stash
+	unfreeze = stash pop
+	changes = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	pp = !sh -c ‘git pull $0 $1 && git push $0 $1’
+
+[github]
+	user = pkrefta
+[ghi]
+	token = 7ec9a33b403eecc04eea721a6f23b563c58146c1

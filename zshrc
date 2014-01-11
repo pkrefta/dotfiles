@@ -49,3 +49,5 @@ export NODE_PATH=/usr/local/lib/node_modules
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 export PATH=/usr/local/share/npm/bin:$PATH
+
+export PGDATA=/usr/local/var/postgres

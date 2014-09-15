@@ -29,9 +29,7 @@ ZSH_THEME="frisk"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git pip brew bundler ruby rails rails3 forklift)
-
-umask 0002
+plugins=(git pip brew bundler ruby rails)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -12,16 +12,19 @@ alias p="cd ~/Code"
 alias g="git"
 alias h="history"
 alias j="jobs"
-alias s="subl ."
+alias s="subl"
+alias e="subl ."
 alias o="open"
 alias oo="open ."
 alias c="clear"
+alias shttp="python -m SimpleHTTPServer"
 
 alias l1='tree -L 1'
 alias l2='tree -L 2'
 alias l3='tree -L 3'
 
-alias 1m='cd ~/Code/1Mind && workon onemind && c'
+# Rails
+alias rst="touch tmp/restart.txt"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

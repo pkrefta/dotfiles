@@ -1,8 +1,0 @@
-#Host *
-#ControlMaster auto
-#ControlPath /tmp/%r@%h:%p
-#ControlPersist yes
-
-Host icarus
-HostName 146.185.133.108
-User pawel

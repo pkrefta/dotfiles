@@ -14,7 +14,7 @@
 	new = green bold
 [alias]
 	lg = log --graph --pretty=format:'[%h] -%d %an %cr: %s' --abbrev-commit --date=relative
-	ci = commit
+	ci = commit -v
 	br = branch
 	d = diff
 	switch = checkout

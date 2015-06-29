@@ -49,3 +49,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 export PATH=/usr/local/share/npm/bin:$PATH
 
 export PGDATA=/usr/local/var/postgres
+
+export PATH=$PATH:/usr/local/opt/go/libexec/bin

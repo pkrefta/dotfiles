@@ -29,13 +29,14 @@ ZSH_THEME="frisk"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git pip brew bundler ruby rails)
+plugins=(vi-mode git pip brew bundler ruby rails safer-paste rake-fast)
 
 source $ZSH/oh-my-zsh.sh
 
 # no autocorrection
 unsetopt correct_all
 unsetopt correct
+setopt no_hist_verify
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/.rbenv/bin
@@ -51,3 +52,30 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PGDATA=/usr/local/var/postgres
 
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+TERM="xterm-256color"
+
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+
+bindkey -v
+
+export KEYTIMEOUT=1
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+#function zle-line-init zle-keymap-select {
+#    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+ #   RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}$(git_custom_status) $EPS1"
+  #  zle reset-prompt
+#}
+
+#zle -N zle-line-init
+#zle -N zle-keymap-select
+
+#eval "$(docker-machine env default)"

@@ -28,3 +28,5 @@
 	user = pkrefta
 [core]
 	excludesfile = /Users/null/.gitignore
+[push]
+	default = simple

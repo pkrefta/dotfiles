@@ -1,0 +1,11 @@
+#!/usr/bin/ruby
+
+Dir.glob('./*') do |file|
+	if File.basename(file) != 'aliases.zsh'
+		src = File.expand_path(file)
+		dst = Dir.home('null') + '/.' + File.basename(file)
+		unless File.exists?(dst)
+			File.symlink(src, dst)
+		end
+	end
+end

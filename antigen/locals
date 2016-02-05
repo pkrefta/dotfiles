@@ -1,0 +1,11 @@
+eval "$(rbenv init -)"
+
+export EDITOR='vim'
+export TERM='xterm-256color'
+
+export PATH=/opt/X11/bin:$PATH
+
+# no autocorrection
+unsetopt correct_all
+unsetopt correct
+setopt no_hist_verify

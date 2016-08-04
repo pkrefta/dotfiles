@@ -18,6 +18,6 @@ antigen bundle command-not-found
 antigen bundle bundler
 antigen bundle brew
 
-antigen theme zenorocha/dracula-theme zsh/dracula
+antigen theme dracula/zsh dracula
 
 antigen apply

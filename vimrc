@@ -1,4 +1,40 @@
-execute pathogen#infect()
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath^=/Users/Misiaczek/.dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin(expand('/Users/Misiaczek/.dein'))
+
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
+
+" Add or remove your plugins here:
+call dein#add('dracula/vim')
+call dein#add('tpope/vim-fugitive')
+call dein#add('tpope/vim-surround')
+call dein#add('tpope/vim-eunuch')
+call dein#add('kien/ctrlp.vim')
+call dein#add('bling/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
+
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
 
 set nocompatible
 set iskeyword-=_
@@ -30,7 +66,7 @@ set showmatch
 
 nnoremap <leader>a :Ag
 
-color Dracula
+color dracula
 
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'

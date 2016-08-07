@@ -21,7 +21,15 @@ call dein#add('tpope/vim-eunuch')
 call dein#add('kien/ctrlp.vim')
 call dein#add('bling/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
-
+call dein#add('tomtom/tcomment_vim')
+call dein#add('mxw/vim-jsx')
+call dein#add('cakebaker/scss-syntax.vim')
+call dein#add('elzr/vim-json')
+call dein#add('hail2u/vim-css3-syntax')
+call dein#add('luochen1990/rainbow')
+call dein#add('rking/ag.vim')
+call dein#add('othree/html5.vim')
+call dein#add('isRuslan/vim-es6')
 
 " Required:
 call dein#end()
@@ -82,6 +90,7 @@ set backspace=indent,eol,start
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+autocmd BufRead,BufNewFile *.zsh setfiletype javascript
 
 let g:agprg="ag --vimgrep"
 let g:ag_working_path_mode = "r"
@@ -148,6 +157,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .svn
       \ --ignore .hg
       \ --ignore node_modules
+      \ --ignore happypack
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
       \ -g ""'

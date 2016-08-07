@@ -1,5 +1,6 @@
 alias rt="rails test"
 alias c="clear"
+alias cg="cd Code/cityglobe"
 
 alias ..="cd .."
 alias ...="cd ../.."

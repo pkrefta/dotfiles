@@ -1,6 +1,6 @@
 alias rt="rails test"
 alias c="clear"
-alias cg="cd Code/cityglobe"
+alias cg="cd ~/Code/cityglobe"
 
 alias ..="cd .."
 alias ...="cd ../.."
@@ -9,6 +9,7 @@ alias ....="cd ../../.."
 alias g='git'
 
 alias vihosts='sudo vim /etc/hosts'
+alias srv='ruby -run -ehttpd . -p8000'
 
 alias tree='tree -C'
 alias l1='tree -L 1'

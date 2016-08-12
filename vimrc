@@ -30,6 +30,8 @@ call dein#add('luochen1990/rainbow')
 call dein#add('rking/ag.vim')
 call dein#add('othree/html5.vim')
 call dein#add('isRuslan/vim-es6')
+call dein#add('easymotion/vim-easymotion')
+call dein#add('Shougo/neocomplete.vim')
 
 " Required:
 call dein#end()
@@ -173,3 +175,42 @@ let g:airline_inactive_collapse = 1
 let g:airline_exclude_preview = 0
 let g:airline_detect_modified = 1
 let g:airline_detect_paste = 1
+
+
+
+
+
+
+
+
+" NeoComplete
+
+let g:acp_enableAtStartup = 0
+
+" Enable Neocomplete
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_fuzzy_completion = 1
+let g:neocomplete_enable_fuzzy_completion_start_length = 2
+let g:neocomplete_enable_camel_case_completion = 0
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#enable_auto_delimiter = 1
+let g:neocomplete#max_list = 20
+let g:neocomplete#force_overwrite_completefunc = 1
+let g:neocomplete#enable_auto_select = 0
+let g:neocomplete#sources#syntax#min_keyword_length = 2
+
+inoremap <expr> <c-j> ("\<C-n>")
+inoremap <expr> <c-k> ("\<C-p>")
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'

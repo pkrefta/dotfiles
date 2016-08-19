@@ -2,6 +2,8 @@ alias rt="rails test"
 alias c="clear"
 alias cg="cd ~/Code/cityglobe"
 
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."

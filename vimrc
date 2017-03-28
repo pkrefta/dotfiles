@@ -3,6 +3,9 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
+:nmap <F1> :echo<CR>
+:imap <F1> <C-o>:echo<CR>
+
 " Required:
 set runtimepath^=/Users/pavello/.dein/repos/github.com/Shougo/dein.vim
 
@@ -14,6 +17,9 @@ call dein#begin(expand('/Users/pavello/.dein'))
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
+call dein#add('terryma/vim-multiple-cursors')
+call dein#add('jiangmiao/auto-pairs')
+call dein#add('tpope/vim-endwise')
 call dein#add('dracula/vim')
 call dein#add('tpope/vim-fugitive')
 call dein#add('tpope/vim-surround')
@@ -32,6 +38,8 @@ call dein#add('othree/html5.vim')
 call dein#add('isRuslan/vim-es6')
 call dein#add('easymotion/vim-easymotion')
 call dein#add('Shougo/neocomplete.vim')
+call dein#add('Raimondi/delimitMate')
+call dein#add('scrooloose/nerdtree')
 
 " Required:
 call dein#end()
@@ -45,18 +53,16 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+syntax enable
 
 set nocompatible
 set iskeyword-=_
 set noswapfile
 
 set guifont=Menlo\ Regular:h14
-
-syntax enable
 set number
 set numberwidth=4
 set history=100
-filetype plugin indent on
 set linebreak
 set showbreak=+++ 
 set textwidth=100
@@ -78,15 +84,13 @@ nnoremap <leader>a :Ag
 
 color dracula
 
-let g:session_autoload = 'yes'
-let g:session_autosave = 'yes'
-
 set ruler
 set showtabline=2
 set undolevels=1000
 set wildmenu
 set undolevels=999
 set backspace=indent,eol,start
+set colorcolumn=80,100
 
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -94,7 +98,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 autocmd BufRead,BufNewFile *.zsh setfiletype javascript
 
-let g:agprg="ag --vimgrep"
+let g:ag_prg="ag --vimgrep"
 let g:ag_working_path_mode = "r"
 
 xnoremap p pgvy

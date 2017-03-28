@@ -1,6 +1,9 @@
 alias rt="rails test"
 alias c="clear"
 alias cg="cd ~/Code/cityglobe"
+alias oc="cd ~/Code/ocomono && pyenv activate ocomono"
+
+alias dj="python manage.py"
 
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 

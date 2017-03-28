@@ -23,10 +23,19 @@
 	unfreeze = stash pop
 	changes = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	pp = !sh -c ‘git pull $0 $1 && git push $0 $1’
+  branch-name = "!git rev-parse --abbrev-ref HEAD"
+  publish = "!git push -u origin $(git branch-name)"
+  unpublish = "!git push origin :$(git branch-name)"
+  # Delete any branches that have been merged into master
+  delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git  branch -d"
+  # Checkout our version of a file and add it
+  ours = "!f() { git checkout --ours $@ && git add $@;  }; f"
+  # Checkout their version of a file and add it
+  theirs = "!f() { git checkout --theirs $@ && git add $@;  }; f"
 
 [github]
 	user = pkrefta
 [core]
-	excludesfile = /Users/null/.gitignore
+	excludesfile = ~/.gitignore
 [push]
 	default = simple

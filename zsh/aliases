@@ -2,10 +2,17 @@ alias rt="rails test"
 alias c="clear"
 alias cg="cd ~/Code/cityglobe"
 alias oc="cd ~/Code/ocomono && pyenv activate ocomono"
+alias wh="cd ~/Code/warehaus && pyenv activate warehaus"
 
 alias dj="python manage.py"
+alias djmm="python manage.py makemigrations"
+alias djm="python manage.py migrate"
+alias djs="python manage.py shell_plus"
+alias pfr="pip freeze > requirements.txt"
 
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+
+alias fixpgpid="rm /usr/local/var/postgres/postmaster.pid"
 
 alias ..="cd .."
 alias ...="cd ../.."

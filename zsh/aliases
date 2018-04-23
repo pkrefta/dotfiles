@@ -10,7 +10,7 @@ alias djm="python manage.py migrate"
 alias djs="python manage.py shell_plus"
 alias pfr="pip freeze > requirements.txt"
 
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+# alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
 alias fixpgpid="rm /usr/local/var/postgres/postmaster.pid"
 

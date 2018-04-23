@@ -1,6 +1,7 @@
 [user]
 	name = Pawel Krefta
 	email = pawel.krefta@gmail.com
+  editor = vim
 [color "status"]
 	added = blue
 	changed = yellow
